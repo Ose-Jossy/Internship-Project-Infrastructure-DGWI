@@ -8,14 +8,14 @@ variable "aws_region" {
 variable "cluster_name" {
   description = "Name of the EKS cluster; also used as a prefix for related resources"
   type        = string
-  default     = "Internship-Project-Infrastructure-DGWI"
+  default     = "smartcloud-eks"
 }
 
 # ---- Networking ----
 variable "vpc_name" {
   description = "Name tag of the VPC"
   type        = string
-  default     = "Internship-Project-Infrastructure-DGWI-vpc"
+  default     = "smartcloud-vpc"
 }
 
 variable "vpc_cidr" {
@@ -111,7 +111,7 @@ variable "node_max_size" {
 variable "key_pair_name" {
   description = "Name of the EC2 key pair (private key is written to <name>.pem)"
   type        = string
-  default     = "Internship-Project-Infrastructure-DGWI-eks-key"
+  default     = "smartcloud-eks-key"
 }
 
 # ---- Helm chart versions ----
@@ -182,7 +182,7 @@ variable "efs_transition_to_ia" {
 variable "kubeconfig_bucket" {
   description = "S3 bucket where the admin kubeconfig is uploaded"
   type        = string
-  default     = "Internship-Project-Infrastructure-DGWI-terraform-state"
+  default     = "terrformstate-060647991200"
 }
 
 variable "kubeconfig_s3_key" {
